@@ -1,0 +1,9 @@
+node_modules
+client/node_modules
+server/node_modules
+client/dist
+.git
+_old_backend
+_old_first_attempt
+server/uploads/*
+!server/uploads/.gitkeep

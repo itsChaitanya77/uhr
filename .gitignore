@@ -1,0 +1,13 @@
+node_modules
+client/node_modules
+server/node_modules
+client/dist
+dist
+.env
+server/.env
+server/uploads/*
+!server/uploads/.gitkeep
+_old_backend
+_old_first_attempt
+.DS_Store
+Thumbs.db

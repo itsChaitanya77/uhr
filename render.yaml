@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: uhr-platform
+    env: node
+    plan: free
+    buildCommand: "cd client && npm install && npm run build && cd ../server && npm install"
+    startCommand: "cd server && npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CLIENT_ORIGIN
+        value: "http://localhost:5173,http://localhost:10000"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: EMERGENCY_WINDOW_MINUTES
+        value: "30"
+      - key: CLINIC_TIMEZONE
+        value: "Asia/Kolkata"

@@ -1,0 +1,25 @@
+{
+  "name": "universal-health-record",
+  "version": "1.0.0",
+  "description": "Universal Health Record (UHR) - Capstone Smart Healthcare & Emergency Access Platform",
+  "private": true,
+  "scripts": {
+    "start": "node server/src/server.js",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['run', 'dev'], { cwd: 'server', stdio: 'inherit', shell: true }); spawn('npm', ['run', 'dev'], { cwd: 'client', stdio: 'inherit', shell: true });\""
+  },
+  "keywords": [
+    "healthcare",
+    "electronic-health-records",
+    "emergency-access",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC"
+}
